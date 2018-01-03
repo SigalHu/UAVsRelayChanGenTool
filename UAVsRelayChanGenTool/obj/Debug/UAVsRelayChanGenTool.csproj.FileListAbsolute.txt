@@ -1,0 +1,9 @@
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\bin\Debug\UAVsRelayChanGenTool.exe.config
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\bin\Debug\UAVsRelayChanGenTool.exe
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\bin\Debug\UAVsRelayChanGenTool.pdb
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.csprojResolveAssemblyReference.cache
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.ChanGenTool.resources
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.Properties.Resources.resources
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.csproj.GenerateResource.Cache
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.exe
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.pdb
