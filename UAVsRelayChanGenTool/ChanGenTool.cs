@@ -7,123 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace UAVsRelayChanGenTool
 {
     public partial class ChanGenTool : Form
     {
-        const float relayNetX = 4;
-        const float relayNetY = 4;
+        private const int maxRelayNum = 6;
+        private string strDefaultPath = System.AppDomain.CurrentDomain.BaseDirectory;
 
-        private void setRelayNet(float length)
+        private void OutputPathShow(string strOutputDir)
         {
-            List<float> x = new List<float>();
-            List<float> y = new List<float>();
-            for (float ii = length / 2; ii < relayNetX * length; ii += length)
+            Graphics graphics = CreateGraphics();
+            SizeF sizeWorkPath = graphics.MeasureString(strOutputDir, lalOutputPath.Font);
+            SizeF sizeDateNow = graphics.MeasureString(lblDateNow.Text, lblDateNow.Font);
+
+            float fltExtraWords = sizeWorkPath.Width - lalOutputPath.Size.Width - lblDateNow.Size.Width + sizeDateNow.Width + 50;
+            if (fltExtraWords > 0)
             {
-                for (float jj = length / 2; jj < relayNetY * length; jj += length)
-                {
-                    x.Add(ii);
-                    y.Add(jj);
-                }
+                float fltWordWidth = sizeWorkPath.Width / strOutputDir.Length;
+                int uintWordIdx = strOutputDir.Length - Convert.ToInt32(fltExtraWords / fltWordWidth);
+                strOutputDir = strOutputDir.Substring(0, uintWordIdx) + "...";
             }
-            chtRelayNet.Series[2].Points.DataBindXY(x, y);
-
-            chtRelayNet.ChartAreas[0].AxisX.Interval = length;
-            chtRelayNet.ChartAreas[0].AxisX.Minimum = 0;
-            chtRelayNet.ChartAreas[0].AxisX.Maximum = relayNetX * length;
-
-            chtRelayNet.ChartAreas[0].AxisY.Interval = length;
-            chtRelayNet.ChartAreas[0].AxisY.Minimum = 0;
-            chtRelayNet.ChartAreas[0].AxisY.Maximum = relayNetY * length;
-        }
-
-        private void setGroundNode(float x0, float y0, float x1, float y1)
-        {
-            float length = float.Parse(txtCoverArea.Text);
-
-            chtRelayNet.Series[0].Points.DataBindXY(
-                new float[] { x0 }, 
-                new float[] { y0 });
-            chtRelayNet.Series[1].Points.DataBindXY(
-                new float[] { x1 },
-                new float[] { y1 });
-
-            List<float> commuLinkX = new List<float>();
-            List<float> commuLinkY = new List<float>();
-            commuLinkX.Add(x0);
-            commuLinkY.Add(y0);
-
-            float nowX = (float)Math.Floor((double)(x0 / length)) * length + length / 2;
-            float nowY = (float)Math.Floor((double)(y0 / length)) * length + length / 2;
-            commuLinkX.Add(nowX);
-            commuLinkY.Add(nowY);
-
-            float lastX = (float)Math.Floor((double)(x1 / length)) * length + length / 2;
-            float lastY = (float)Math.Floor((double)(y1 / length)) * length + length / 2;
-
-            float preX = 0, preY = 0, nextX = 0, nextY = 0, nextLength, tmp;
-            int nextIdx;
-            while (nowX != lastX || nowY != lastY)
-            {
-                nextLength = float.MaxValue;
-
-                tmp = (nowX - length - x0) * (nowX - length - x0)
-                    + (nowY - y0) * (nowY - y0)
-                    + (nowX - length - x1) * (nowX - length - x1)
-                    + (nowY - y1) * (nowY - y1);
-                if (tmp < nextLength && ((nowX - length) != preX || nowY != preY))
-                {
-                    nextLength = tmp;
-                    nextX = nowX - length;
-                    nextY = nowY;
-                }
-
-
-                tmp = (nowX + length - x0) * (nowX + length - x0)
-                    + (nowY - y0) * (nowY - y0)
-                    + (nowX + length - x1) * (nowX + length - x1)
-                    + (nowY - y1) * (nowY - y1);
-                if (tmp < nextLength && ((nowX + length) != preX || nowY != preY))
-                {
-                    nextLength = tmp;
-                    nextX = nowX + length;
-                    nextY = nowY;
-                }
-
-                tmp = (nowX - x0) * (nowX - x0)
-                    + (nowY - length - y0) * (nowY - length - y0)
-                    + (nowX - x1) * (nowX - x1)
-                    + (nowY - length - y1) * (nowY - length - y1);
-                if (tmp < nextLength && (nowX != preX || (nowY - length) != preY))
-                {
-                    nextLength = tmp;
-                    nextX = nowX;
-                    nextY = nowY - length;
-                }
-
-                tmp = (nowX - x0) * (nowX - x0)
-                    + (nowY + length - y0) * (nowY + length - y0)
-                    + (nowX - x1) * (nowX - x1)
-                    + (nowY + length - y1) * (nowY + length - y1);
-                if (tmp < nextLength && (nowX != preX || (nowY + length) != preY))
-                {
-                    nextLength = tmp;
-                    nextX = nowX;
-                    nextY = nowY + length;
-                }
-
-                preX = nowX;
-                preY = nowY;
-                nowX = nextX;
-                nowY = nextY;
-                commuLinkX.Add(nowX);
-                commuLinkY.Add(nowY);
-            }
-
-            commuLinkX.Add(x1);
-            commuLinkY.Add(y1);
-            chtRelayNet.Series[3].Points.DataBindXY(commuLinkX, commuLinkY);
+            lalOutputPath.Text = strOutputDir;
         }
 
         public ChanGenTool()
@@ -139,11 +45,12 @@ namespace UAVsRelayChanGenTool
 
             lblDateNow.Text = DateTime.Now.ToString("yyyy年MM月dd日");
 
-            setRelayNet(float.Parse(txtCoverArea.Text));
-            setGroundNode(float.Parse(txtLaunPosX.Text),
-                float.Parse(txtLaunPosY.Text),
-                float.Parse(txtRecvPosX.Text),
-                float.Parse(txtRecvPosY.Text));
+            lalOutputPath.ToolTipText = strDefaultPath + "Output\\";
+            if (!Directory.Exists(lalOutputPath.ToolTipText))
+                Directory.CreateDirectory(lalOutputPath.ToolTipText);
+            OutputPathShow(lalOutputPath.ToolTipText);
+
+            dgvGeneChan.RowCount = maxRelayNum;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -153,15 +60,48 @@ namespace UAVsRelayChanGenTool
 
         private void txtCoverArea_TextChanged(object sender, EventArgs e)
         {
-            setRelayNet(float.Parse(txtCoverArea.Text));
         }
 
         private void txtLaunRecvPos_TextChanged(object sender, EventArgs e)
         {
-            setGroundNode(float.Parse(txtLaunPosX.Text),
-                float.Parse(txtLaunPosY.Text),
-                float.Parse(txtRecvPosX.Text),
-                float.Parse(txtRecvPosY.Text));
+        }
+
+        private void dgvGeneChan_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            for (int ii = e.RowIndex; ii < e.RowIndex + e.RowCount; ii++)
+            {
+                dgv.Rows[ii].HeaderCell.Value = "无人机中继" + (ii + 1).ToString();
+            }
+        }
+
+        private void dgvGeneChan_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            for (int ii = e.RowIndex; ii < dgvGeneChan.RowCount; ii++)
+            {
+                dgv.Rows[ii].HeaderCell.Value = "无人机中继" + (ii + 1).ToString();
+            }
+        }
+
+        private void dgvGeneChan_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (e.StateChanged == DataGridViewElementStates.ReadOnly)
+            {
+                if (e.Cell.ReadOnly)
+                {
+                    e.Cell.Style.ForeColor = Color.FromArgb(85, 85, 85);
+                    e.Cell.Style.SelectionForeColor = Color.FromArgb(85, 85, 85);
+                }
+                else
+                {
+                    e.Cell.Style.ForeColor = dgv.ColumnHeadersDefaultCellStyle.ForeColor;
+                    e.Cell.Style.SelectionForeColor = dgv.ColumnHeadersDefaultCellStyle.ForeColor;
+                }
+            }
         }
     }
 }

@@ -2,3 +2,6 @@ Matlab/
 x64/
 *.sdf
 *.pdb
+bin/
+*/*/Debug/
+*.TMP
