@@ -13,7 +13,7 @@ namespace UAVsRelayChanGenTool
 {
     public partial class ChanGenTool : Form
     {
-        private const int maxRelayNum = 6;
+        private const int maxRelayNum = 2;
         private string strDefaultPath = System.AppDomain.CurrentDomain.BaseDirectory;
 
         private void OutputPathShow(string strOutputDir)
@@ -45,7 +45,8 @@ namespace UAVsRelayChanGenTool
 
             lblDateNow.Text = DateTime.Now.ToString("yyyy年MM月dd日");
 
-            lalOutputPath.ToolTipText = strDefaultPath + "Output\\";
+            //lalOutputPath.ToolTipText = strDefaultPath + "Output\\";
+            lalOutputPath.ToolTipText = "C:\\Output\\";
             if (!Directory.Exists(lalOutputPath.ToolTipText))
                 Directory.CreateDirectory(lalOutputPath.ToolTipText);
             OutputPathShow(lalOutputPath.ToolTipText);
@@ -72,7 +73,7 @@ namespace UAVsRelayChanGenTool
 
             for (int ii = e.RowIndex; ii < e.RowIndex + e.RowCount; ii++)
             {
-                dgv.Rows[ii].HeaderCell.Value = "无人机中继" + (ii + 1).ToString();
+                dgv.Rows[ii].HeaderCell.Value = "中继节点" + (ii + 1).ToString();
             }
         }
 
@@ -82,7 +83,7 @@ namespace UAVsRelayChanGenTool
 
             for (int ii = e.RowIndex; ii < dgvGeneChan.RowCount; ii++)
             {
-                dgv.Rows[ii].HeaderCell.Value = "无人机中继" + (ii + 1).ToString();
+                dgv.Rows[ii].HeaderCell.Value = "中继节点" + (ii + 1).ToString();
             }
         }
 
@@ -100,6 +101,20 @@ namespace UAVsRelayChanGenTool
                 {
                     e.Cell.Style.ForeColor = dgv.ColumnHeadersDefaultCellStyle.ForeColor;
                     e.Cell.Style.SelectionForeColor = dgv.ColumnHeadersDefaultCellStyle.ForeColor;
+                }
+            }
+        }
+
+        private Form1 refBox = new Form1();
+        private void cboG2AEnv_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ComboBox cbo = sender as ComboBox;
+            string strRefEnv = cbo.SelectedItem.ToString();
+
+            if (strRefEnv == "自定义")
+            {
+                if (DialogResult.OK != refBox.ShowDialog(this))
+                {
                 }
             }
         }

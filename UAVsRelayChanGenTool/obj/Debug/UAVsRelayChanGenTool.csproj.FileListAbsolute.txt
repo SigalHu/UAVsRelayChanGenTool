@@ -7,3 +7,4 @@ C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGe
 C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.csproj.GenerateResource.Cache
 C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.exe
 C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.pdb
+C:\Code\Team\UAVsRelayChanGenTool\UAVsRelayChanGenTool\obj\Debug\UAVsRelayChanGenTool.Form1.resources

@@ -30,44 +30,43 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChanGenTool));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.载入配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.输出配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.输出路径ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.输出覆盖ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.信道仿真ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.画图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
             this.收发端轨迹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.天线增益ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.发射端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.接收端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于软件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolMenu = new System.Windows.Forms.ToolStrip();
             this.btnSaveCfg = new System.Windows.Forms.ToolStripButton();
             this.btnLoadCfg = new System.Windows.Forms.ToolStripButton();
-            this.btnOutputSet = new System.Windows.Forms.ToolStripButton();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnOutputSet = new System.Windows.Forms.ToolStripButton();
             this.btnRunFPGA = new System.Windows.Forms.ToolStripButton();
             this.btnOutputCover = new System.Windows.Forms.ToolStripButton();
-            this.btnChanFig = new System.Windows.Forms.ToolStripButton();
             this.grpSystemPara = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtAeroCarrierFre = new System.Windows.Forms.TextBox();
@@ -108,6 +107,15 @@
             this.picCEIE = new System.Windows.Forms.PictureBox();
             this.picNUAA = new System.Windows.Forms.PictureBox();
             this.dgvGeneChan = new System.Windows.Forms.DataGridView();
+            this.colRelayLaun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRelayRecv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRelayAF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colA2ALen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRelaySpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabGeneMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,15 +147,6 @@
             this.lalRecvAnte = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.colRelayLaun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRelayRecv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRelayAF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colA2ALen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRelaySpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainMenu.SuspendLayout();
             this.MainToolMenu.SuspendLayout();
             this.grpSystemPara.SuspendLayout();
@@ -178,7 +177,7 @@
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MainMenu.Size = new System.Drawing.Size(1176, 27);
+            this.MainMenu.Size = new System.Drawing.Size(1176, 28);
             this.MainMenu.TabIndex = 38;
             this.MainMenu.Text = "menuStrip1";
             // 
@@ -214,9 +213,29 @@
             // 输出配置ToolStripMenuItem
             // 
             this.输出配置ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.输出配置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.输出路径ToolStripMenuItem,
+            this.输出覆盖ToolStripMenuItem});
             this.输出配置ToolStripMenuItem.Name = "输出配置ToolStripMenuItem";
             this.输出配置ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.输出配置ToolStripMenuItem.Text = "输出配置";
+            // 
+            // 输出路径ToolStripMenuItem
+            // 
+            this.输出路径ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.输出路径ToolStripMenuItem.Name = "输出路径ToolStripMenuItem";
+            this.输出路径ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.输出路径ToolStripMenuItem.Text = "输出路径";
+            // 
+            // 输出覆盖ToolStripMenuItem
+            // 
+            this.输出覆盖ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.输出覆盖ToolStripMenuItem.Checked = true;
+            this.输出覆盖ToolStripMenuItem.CheckOnClick = true;
+            this.输出覆盖ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.输出覆盖ToolStripMenuItem.Name = "输出覆盖ToolStripMenuItem";
+            this.输出覆盖ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.输出覆盖ToolStripMenuItem.Text = "结果覆盖";
             // 
             // 退出ToolStripMenuItem
             // 
@@ -252,51 +271,26 @@
             // 画图ToolStripMenuItem
             // 
             this.画图ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.收发端轨迹ToolStripMenuItem,
-            this.天线增益ToolStripMenuItem});
+            this.toolStripMenuItem19,
+            this.收发端轨迹ToolStripMenuItem});
             this.画图ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.画图ToolStripMenuItem.Name = "画图ToolStripMenuItem";
-            this.画图ToolStripMenuItem.Size = new System.Drawing.Size(51, 23);
+            this.画图ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.画图ToolStripMenuItem.Text = "画图";
+            // 
+            // toolStripMenuItem19
+            // 
+            this.toolStripMenuItem19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.toolStripMenuItem19.Name = "toolStripMenuItem19";
+            this.toolStripMenuItem19.Size = new System.Drawing.Size(174, 26);
+            this.toolStripMenuItem19.Text = "中继网络场景";
             // 
             // 收发端轨迹ToolStripMenuItem
             // 
             this.收发端轨迹ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.收发端轨迹ToolStripMenuItem.Name = "收发端轨迹ToolStripMenuItem";
-            this.收发端轨迹ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.收发端轨迹ToolStripMenuItem.Text = "中继网络";
-            // 
-            // 天线增益ToolStripMenuItem
-            // 
-            this.天线增益ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.天线增益ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.发射端ToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.接收端ToolStripMenuItem});
-            this.天线增益ToolStripMenuItem.Name = "天线增益ToolStripMenuItem";
-            this.天线增益ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.天线增益ToolStripMenuItem.Text = "天线增益";
-            // 
-            // 发射端ToolStripMenuItem
-            // 
-            this.发射端ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.发射端ToolStripMenuItem.Name = "发射端ToolStripMenuItem";
-            this.发射端ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
-            this.发射端ToolStripMenuItem.Text = "地面发射站";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(159, 26);
-            this.toolStripMenuItem2.Text = "地面接收站";
-            // 
-            // 接收端ToolStripMenuItem
-            // 
-            this.接收端ToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.接收端ToolStripMenuItem.Name = "接收端ToolStripMenuItem";
-            this.接收端ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
-            this.接收端ToolStripMenuItem.Text = "中继节点";
+            this.收发端轨迹ToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.收发端轨迹ToolStripMenuItem.Text = "信道状态显示";
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -329,12 +323,12 @@
             this.MainToolMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSaveCfg,
             this.btnLoadCfg,
-            this.btnOutputSet,
             this.btnQuit,
+            this.toolStripButton1,
+            this.btnOutputSet,
             this.btnRunFPGA,
-            this.btnOutputCover,
-            this.btnChanFig});
-            this.MainToolMenu.Location = new System.Drawing.Point(0, 27);
+            this.btnOutputCover});
+            this.MainToolMenu.Location = new System.Drawing.Point(0, 28);
             this.MainToolMenu.Name = "MainToolMenu";
             this.MainToolMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.MainToolMenu.Size = new System.Drawing.Size(1176, 27);
@@ -364,18 +358,6 @@
             this.btnLoadCfg.Tag = "";
             this.btnLoadCfg.ToolTipText = "载入配置";
             // 
-            // btnOutputSet
-            // 
-            this.btnOutputSet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnOutputSet.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOutputSet.ForeColor = System.Drawing.Color.Black;
-            this.btnOutputSet.Image = ((System.Drawing.Image)(resources.GetObject("btnOutputSet.Image")));
-            this.btnOutputSet.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnOutputSet.Name = "btnOutputSet";
-            this.btnOutputSet.Size = new System.Drawing.Size(24, 24);
-            this.btnOutputSet.Tag = "";
-            this.btnOutputSet.ToolTipText = "设置信道数据保存目录";
-            // 
             // btnQuit
             // 
             this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -388,6 +370,30 @@
             this.btnQuit.Tag = "";
             this.btnQuit.ToolTipText = "退出程序";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.toolStripButton1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Tag = "";
+            this.toolStripButton1.ToolTipText = "设置信道数据保存目录";
+            // 
+            // btnOutputSet
+            // 
+            this.btnOutputSet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnOutputSet.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOutputSet.ForeColor = System.Drawing.Color.Black;
+            this.btnOutputSet.Image = ((System.Drawing.Image)(resources.GetObject("btnOutputSet.Image")));
+            this.btnOutputSet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnOutputSet.Name = "btnOutputSet";
+            this.btnOutputSet.Size = new System.Drawing.Size(24, 24);
+            this.btnOutputSet.Tag = "";
+            this.btnOutputSet.ToolTipText = "设置信道数据保存目录";
             // 
             // btnRunFPGA
             // 
@@ -412,18 +418,6 @@
             this.btnOutputCover.Size = new System.Drawing.Size(24, 24);
             this.btnOutputCover.Tag = "";
             this.btnOutputCover.ToolTipText = "停止仿真";
-            // 
-            // btnChanFig
-            // 
-            this.btnChanFig.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnChanFig.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnChanFig.ForeColor = System.Drawing.Color.Black;
-            this.btnChanFig.Image = ((System.Drawing.Image)(resources.GetObject("btnChanFig.Image")));
-            this.btnChanFig.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnChanFig.Name = "btnChanFig";
-            this.btnChanFig.Size = new System.Drawing.Size(24, 24);
-            this.btnChanFig.Tag = "";
-            this.btnChanFig.ToolTipText = "查看最近一次浏览过的图像";
             // 
             // grpSystemPara
             // 
@@ -515,11 +509,13 @@
             this.cboG2AEnv.Items.AddRange(new object[] {
             "丘陵",
             "山区",
-            "海洋"});
+            "海洋",
+            "自定义"});
             this.cboG2AEnv.Location = new System.Drawing.Point(126, 29);
             this.cboG2AEnv.Name = "cboG2AEnv";
-            this.cboG2AEnv.Size = new System.Drawing.Size(67, 28);
+            this.cboG2AEnv.Size = new System.Drawing.Size(85, 28);
             this.cboG2AEnv.TabIndex = 12;
+            this.cboG2AEnv.SelectionChangeCommitted += new System.EventHandler(this.cboG2AEnv_SelectionChangeCommitted);
             // 
             // cboSampleFre
             // 
@@ -927,14 +923,14 @@
             this.dgvGeneChan.AllowUserToResizeRows = false;
             this.dgvGeneChan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dgvGeneChan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGeneChan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGeneChan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvGeneChan.ColumnHeadersHeight = 43;
             this.dgvGeneChan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvGeneChan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -948,26 +944,26 @@
             this.Column3,
             this.Column4});
             this.dgvGeneChan.ContextMenuStrip = this.tabGeneMenu;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGeneChan.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGeneChan.DefaultCellStyle = dataGridViewCellStyle41;
             this.dgvGeneChan.EnableHeadersVisualStyles = false;
             this.dgvGeneChan.GridColor = System.Drawing.Color.Teal;
             this.dgvGeneChan.Location = new System.Drawing.Point(11, 290);
             this.dgvGeneChan.Name = "dgvGeneChan";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGeneChan.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("华文楷体", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGeneChan.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dgvGeneChan.RowHeadersWidth = 146;
             this.dgvGeneChan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvGeneChan.RowTemplate.Height = 32;
@@ -977,6 +973,105 @@
             this.dgvGeneChan.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.dgvGeneChan_CellStateChanged);
             this.dgvGeneChan.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvGeneChan_RowsAdded);
             this.dgvGeneChan.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvGeneChan_RowsRemoved);
+            // 
+            // colRelayLaun
+            // 
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.NullValue = "0";
+            this.colRelayLaun.DefaultCellStyle = dataGridViewCellStyle23;
+            this.colRelayLaun.HeaderText = "发射天线增益(dB)";
+            this.colRelayLaun.Name = "colRelayLaun";
+            this.colRelayLaun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRelayLaun.Width = 112;
+            // 
+            // colRelayRecv
+            // 
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.NullValue = "0";
+            this.colRelayRecv.DefaultCellStyle = dataGridViewCellStyle24;
+            this.colRelayRecv.HeaderText = "接收天线增益(dB)";
+            this.colRelayRecv.Name = "colRelayRecv";
+            this.colRelayRecv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRelayRecv.Width = 112;
+            // 
+            // colRelayAF
+            // 
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.NullValue = "0";
+            this.colRelayAF.DefaultCellStyle = dataGridViewCellStyle34;
+            this.colRelayAF.HeaderText = "转发增益(dB)";
+            this.colRelayAF.Name = "colRelayAF";
+            this.colRelayAF.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRelayAF.Width = 112;
+            // 
+            // colA2ALen
+            // 
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.NullValue = "2000";
+            this.colA2ALen.DefaultCellStyle = dataGridViewCellStyle35;
+            this.colA2ALen.HeaderText = "相对位置X(m)";
+            this.colA2ALen.Name = "colA2ALen";
+            this.colA2ALen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colA2ALen.Width = 112;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.NullValue = "0";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle36;
+            this.Column1.HeaderText = "相对位置Y(m)";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 112;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle37.NullValue = "0";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle37;
+            this.Column2.HeaderText = "相对位置Z(m)";
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column2.Width = 112;
+            // 
+            // colRelaySpeed
+            // 
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.NullValue = "0";
+            this.colRelaySpeed.DefaultCellStyle = dataGridViewCellStyle38;
+            this.colRelaySpeed.HeaderText = "移动速度X(m/s)";
+            this.colRelaySpeed.Name = "colRelaySpeed";
+            this.colRelaySpeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRelaySpeed.Width = 112;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.NullValue = "0";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle39;
+            this.Column3.HeaderText = "移动速度Y(m/s)";
+            this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 112;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.NullValue = "0";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle40;
+            this.Column4.HeaderText = "移动速度Z(m/s)";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column4.Width = 112;
             // 
             // tabGeneMenu
             // 
@@ -1328,105 +1423,6 @@
             this.button2.Text = "停止";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // colRelayLaun
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.colRelayLaun.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colRelayLaun.HeaderText = "发射天线增益(dB)";
-            this.colRelayLaun.Name = "colRelayLaun";
-            this.colRelayLaun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRelayLaun.Width = 112;
-            // 
-            // colRelayRecv
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.NullValue = "0";
-            this.colRelayRecv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colRelayRecv.HeaderText = "接收天线增益(dB)";
-            this.colRelayRecv.Name = "colRelayRecv";
-            this.colRelayRecv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRelayRecv.Width = 112;
-            // 
-            // colRelayAF
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.NullValue = "0";
-            this.colRelayAF.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colRelayAF.HeaderText = "转发增益(dB)";
-            this.colRelayAF.Name = "colRelayAF";
-            this.colRelayAF.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRelayAF.Width = 112;
-            // 
-            // colA2ALen
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = "2000";
-            this.colA2ALen.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colA2ALen.HeaderText = "相对位置X(m)";
-            this.colA2ALen.Name = "colA2ALen";
-            this.colA2ALen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colA2ALen.Width = 112;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.NullValue = "0";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column1.HeaderText = "相对位置Y(m)";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 112;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.NullValue = "0";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column2.HeaderText = "相对位置Z(m)";
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column2.Width = 112;
-            // 
-            // colRelaySpeed
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.NullValue = "0";
-            this.colRelaySpeed.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colRelaySpeed.HeaderText = "移动速度X(m/s)";
-            this.colRelaySpeed.Name = "colRelaySpeed";
-            this.colRelaySpeed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRelaySpeed.Width = 112;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.NullValue = "0";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column3.HeaderText = "移动速度Y(m/s)";
-            this.Column3.Name = "Column3";
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 112;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.NullValue = "0";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Column4.HeaderText = "移动速度Z(m/s)";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 112;
-            // 
             // ChanGenTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1494,9 +1490,6 @@
         private System.Windows.Forms.ToolStripMenuItem 信道仿真ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 画图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 收发端轨迹ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 天线增益ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 发射端ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 接收端ToolStripMenuItem;
         private System.Windows.Forms.ToolStrip MainToolMenu;
         private System.Windows.Forms.ToolStripButton btnSaveCfg;
         private System.Windows.Forms.ToolStripButton btnLoadCfg;
@@ -1504,7 +1497,6 @@
         private System.Windows.Forms.ToolStripButton btnOutputCover;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnRunFPGA;
-        private System.Windows.Forms.ToolStripButton btnChanFig;
         private System.Windows.Forms.GroupBox grpSystemPara;
         private System.Windows.Forms.StatusStrip statusShow;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
@@ -1521,7 +1513,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboSampleFre;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.PictureBox picCEIE;
         private System.Windows.Forms.PictureBox picNUAA;
         private System.Windows.Forms.DataGridView dgvGeneChan;
@@ -1587,6 +1578,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRelaySpeed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem 输出覆盖ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 输出路径ToolStripMenuItem;
     }
 }
 
